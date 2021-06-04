@@ -19,7 +19,7 @@ namespace SQLinks2Move
             Console.Write("Database Name : ");
             String database = Console.ReadLine();
             Console.WriteLine("Note : You need to setup responder or impacket-ntlmrelayx prior of it");
-            Console.Write("LHOST Realy Hash : ");
+            Console.Write("LHOST Relay Hash : ");
             String lhost = Console.ReadLine();
             Console.Write("Username to Impersonate : ");
             String username = Console.ReadLine();
