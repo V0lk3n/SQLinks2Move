@@ -34,8 +34,43 @@ An analyse of the code is planned to be created to get a better documentation.
 
 4. Specify your values when prompted.
 
-## Demo
+## Demo - Basic Usage
 
-TODO
+For legal reason, i have hidden sensitive informations on the pictures. So i will give randome informations to lead you througt this demo.
+
+### Step 1 - Basic usage.
+
+First running whoami, we see that we are ```PANDA\sqlsvc```. Running hostname told us that we are on the domaine machine name ```KOALA01```.
+
+Running SQLinks2Move binary, specifying servername ```KOALA01``` database ```master``` and leaving blank all others value except RPC where we choose "N" return this result.
+
+![step 1](https://user-images.githubusercontent.com/22322762/120856435-2b6d4800-c580-11eb-8599-5f8dc86e6826.png)
+
+We can see that the auth is a success, we are mapped as ```dbo``` we are member of public and sysadmin role. We linked two SQL Server which are ```KOALA01\SQLEXPRESS``` and ```PIZZA03```. The login ```sa``` can be impersonated.
+
+### Step 2 - Command Execution on PIZZA03
+
+Re-running SQLinks2Move.exe but this time specifying the user to impersonate ```sa```, executing the command ```hostname``` against the server ```PIZZA03```, checking if RPC is enabled, and allow to enable it.
+
+![step 2](https://user-images.githubusercontent.com/22322762/120855557-f14f7680-c57e-11eb-9d30-ab29be314e08.png)
+
+We see that we impersonated ```sa``` with sucess, that RPC OUT was disabled (Because of "False" answer), we enabled it, executed ```hostname``` as ```sa``` against ```PIZZA03``` return the result of command ```PIZZA03```
+
+We can do command execution, so for example, using web_delivery metasploit module using powershell payload, we should be able to retrieve a shell on ```PIZZA03```
+
+## Demo - NTLM Hashes.
+
+By setting up responder, and specifying your LHOST when prompted by SQLinks2Move.exe, we can retreive NTLM hash and attempt to crack it.
+
+![step 3](https://user-images.githubusercontent.com/22322762/120856039-83f01580-c57f-11eb-97ea-9fff9da2ddb4.png)
+
+Alternatively we can setup impacket-ntlmrelayx and execute a command to get a reverse shell if the target is vulnerable.
+
+TODO : Screenshot
+
+
+
+
+
 
 
