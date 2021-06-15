@@ -36,13 +36,13 @@ An analyse of the code will be created to get a better documentation.
 
 ## Demo - Basic Usage
 
-For legal reason, I have hidden sensitive informations on the pictures. So i will give randome informations to lead you througt this demo.
+For legal reason, I have hidden sensitive informations on the pictures. So i will give random informations to lead you througt this demo.
 
 ### Step 1 - Basic usage.
 
 First running whoami, we see that we are ```PANDA\sqlsvc```. Running hostname told us that we are on the domaine machine name ```KOALA01```.
 
-Running SQLinks2Move binary, specifying servername ```KOALA01``` database ```master``` and leaving blank all others value except RPC where we choose "N" return this result.
+Running SQLinks2Move binary, specifying servername ```KOALA01``` database ```master``` and leaving blank all others value except for RPC, where we choose "N" on both, return this result.
 
 ![step 1](https://user-images.githubusercontent.com/22322762/120856435-2b6d4800-c580-11eb-8599-5f8dc86e6826.png)
 
